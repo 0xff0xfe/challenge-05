@@ -33,7 +33,10 @@ public class main {
 		}
 
 		try {
+
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+			
 			DocumentBuilder builder = dbf.newDocumentBuilder();
 			Document doc = builder.parse(new InputSource(new StringReader(inputXml)));
 
