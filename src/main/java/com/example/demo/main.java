@@ -36,6 +36,7 @@ public class main {
 
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			dbf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+			dbf.setXIncludeAware(false);
 			
 			DocumentBuilder builder = dbf.newDocumentBuilder();
 			Document doc = builder.parse(new InputSource(new StringReader(inputXml)));
